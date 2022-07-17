@@ -12,12 +12,7 @@ function print(text) {
   @returns {boolean}
  */
 function isValid(name) {
-  if (name && name.length >= 4) {
-    for (let i = 0; i < name.length; i += 1) {
-      if (name[i] === " ") {
-        return false;
-      }
-    }
+  if (name && name.length >= 4 && !name.includes(" ")) {
     return true;
   }
   return false;

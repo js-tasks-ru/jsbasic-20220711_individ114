@@ -1,16 +1,29 @@
-// Ниже закомментирован код, который написал сам по имеющимся знаниям,
-// но, очевидно, он не актуальный. Нашёл более подходящий. https://learn.javascript.ru/regexp-methods
+// Переделал на includes
 
 function checkSpam(str) {
   let spamWords = ["XXX", "1xBet", "QwErTy"];
   for (let i = 0; i < spamWords.length; i += 1) {
-    let result = str.toLowerCase().match(spamWords[i].toLowerCase(), "g");
+    let result = str.toLowerCase().includes(spamWords[i].toLowerCase());
     if (result) {
       return true;
     }
   }
   return false;
 }
+
+// Ниже закомментирован код, который написал сам по имеющимся знаниям,
+// но, очевидно, он не актуальный. Нашёл более подходящий. https://learn.javascript.ru/regexp-methods
+
+// function checkSpam(str) {
+//   let spamWords = ["XXX", "1xBet", "QwErTy"];
+//   for (let i = 0; i < spamWords.length; i += 1) {
+//     let result = str.toLowerCase().match(spamWords[i].toLowerCase(), "g");
+//     if (result) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
 // //////////////////////////////////////////////////////////////////
 // Спам лист
