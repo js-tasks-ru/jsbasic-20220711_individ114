@@ -1,6 +1,5 @@
 function makeFriendsList(friends) {
   let list = document.createElement("ul");
-  list.id = "qwerty";
   let friendsFilter = friends.map(
     (elem) => `${elem.firstName} ${elem.lastName}`
   );
