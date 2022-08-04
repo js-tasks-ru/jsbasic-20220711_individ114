@@ -11,8 +11,7 @@ function initCarousel() {
 
   right.addEventListener("click", () => {
     transCount += -parseInt(caruselWidth.width);
-    if (transCount === transCount)
-      carusel.style.transform = `translateX(${transCount}px)`;
+    carusel.style.transform = `translateX(${transCount}px)`;
     if (transCount === -(parseInt(caruselWidth.width) * 3))
       right.style.display = "none";
     left.style.display = "";
@@ -20,9 +19,7 @@ function initCarousel() {
 
   left.addEventListener("click", () => {
     transCount += parseInt(caruselWidth.width);
-    if (transCount === transCount)
-      carusel.style.transform = `translateX(${transCount}px)`;
-    console.log(transCount);
+    carusel.style.transform = `translateX(${transCount}px)`;
     if (transCount === 0) left.style.display = "none";
     right.style.display = "";
   });
