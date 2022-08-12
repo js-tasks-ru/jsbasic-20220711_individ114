@@ -1,7 +1,6 @@
 function initCarousel() {
   let right = document.querySelector(".carousel__arrow_right");
   let left = document.querySelector(".carousel__arrow_left");
-  let slides = document.querySelectorAll(".carousel__slide");
   let carusel = document.querySelector(".carousel__inner");
   let caruselWidth = getComputedStyle(
     document.querySelector(".carousel__slide")
